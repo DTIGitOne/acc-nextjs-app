@@ -1,0 +1,58 @@
+/* site background */
+
+.videoBackgroundBox {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    animation-duration: 950ms;
+    animation-fill-mode: forwards;
+}
+
+.videoBackground {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.75);
+    animation-duration: 1050ms;
+    animation-fill-mode: forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoTag {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    object-fit: cover;
+    animation: fadeIn 1500ms ease-in-out;
+}
+
+/* header */
+
+#headerBox {
+    height: 10vh;
+    position: absolute;
+    width: 100%;
+    background-color: red;
+    z-index: 11;
+    object-fit: cover;
+    animation: fadeIn 750ms ease-in-out;
+}
+
+@keyframes hideEle {
+    0% {}
+    100% {display: none;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes redirectAniBackground {
+    0% {background: rgba(0, 0, 0, 0.9);}
+    100% {background: black;}
+}
