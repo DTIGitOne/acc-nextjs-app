@@ -43,14 +43,14 @@
 
 /* button for cars */ 
 #carsButton {
-    width: 287px;
-    height: 72px;
+    width: 400px;
+    height: 105px;
     overflow: hidden;
     border: none;
     color: #fff;
     background: none;
     position: relative;
-    padding-bottom: 2.5em;
+    padding-bottom: 4em;
     cursor: pointer;
     animation-fill-mode: forwards;
     animation-duration: 1300;
@@ -84,14 +84,14 @@
   #carsButton .clone > *,
   #carsButton .text > * {
     opacity: 1;
-    font-size: 37px;
+    font-size: 56px;
     letter-spacing: 4px;
     transition: 0.2s;
     margin: 0px 4px;
   }
   
   #carsButton .clone > * {
-    transform: translateY(60px);
+    transform: translateY(160px);
   }
   
   #carsButton:hover .clone > * {
@@ -102,7 +102,7 @@
   
   #carsButton:hover .text > * {
     opacity: 1;
-    transform: translateY(-60px);
+    transform: translateY(-110px);
     transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
   }
   
@@ -122,6 +122,70 @@
     transition-delay: 0.3s;
   }
 
+  /* header buttons */ 
+
+  #headerBox button {
+    font-size: 32px;
+    color: #e4dfdf;
+    padding: 0px 15px;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+  }
+
+  #headerBox button:hover {
+    scale: 1.1;
+    color: white;
+    letter-spacing: 2px;
+  }
+
+  .btn-shine {
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    color: #fff;
+    background: linear-gradient(to right, #9f9f9f 0, #fff 6%, #868686 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 500;
+    font-size: 38px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s;
+    transition-delay: 0.05s;
+    animation-fill-mode: forwards;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .btn-shine:hover {
+    scale: 1.1;
+    -webkit-text-fill-color: #fff;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
+
+  .btn-shine:nth-child(1) {
+    animation: shine 6s linear infinite;
+  }
+
+  .btn-shine:nth-child(2) {
+    animation: shine2 6s linear infinite;
+    animation-delay: 2.3s;
+  }
+
+  .btn-shine:nth-child(3) {
+    animation: shine 6s linear infinite;
+    animation-delay: 4.6s;
+  }
+
+  #headerBox button {
+    height: 80%;
+  }
+
   /* button animations */
 
 @keyframes navigatingButtonFadeOut {
@@ -132,4 +196,22 @@
 @keyframes navigatingButtonFadeIn {
     0% {opacity: 0; display: none;}
     100%{opacity: 1; display: inline;}
+}
+
+@keyframes shine {
+  50% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100px;
+  }
+}
+
+@keyframes shine2 {
+  50% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 120px;
+  }
 }

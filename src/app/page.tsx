@@ -7,9 +7,7 @@ import { useRouter } from 'next/navigation';
 const videoSrc = '/videos/acc intro site.mp4';
 
 const Home = () => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [ navigating, setNavigating ] = useState(false);
-  const [ nextPageAni, setNextPageAni] = useState(false);
 
   const router = useRouter();
 
@@ -22,10 +20,6 @@ const Home = () => {
 
   return (
     <div  className='videoBackgroundBox'>
-      {nextPageAni ? (
-        null
-      ) : (
-        <>
         <div className='videoBackground' style={{animationName: navigating ? "redirectAniBackground" : ""}}>
       <button onClick={navFunc} className="cta">
        <span className="hover-underline-animation" style={{animationName: navigating ? "navigatingButtonFadeOut" : "navigatingButtonFadeIn"}}> Check out details </span>
@@ -37,11 +31,9 @@ const Home = () => {
         ></path>
       </button>
       </div>
-      <video className='videoTag' autoPlay loop muted onLoadedData={() => setIsVideoLoaded(true)}>
+      <video className='videoTag' autoPlay loop muted>
          <source src={videoSrc} type='video/mp4' />
       </video>
-        </>
-      )}
     </div>
   );
 }

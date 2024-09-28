@@ -14,7 +14,7 @@
     width: 100%;
     position: absolute;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.7);
     animation-duration: 1050ms;
     animation-fill-mode: forwards;
     display: flex;
@@ -33,13 +33,27 @@
 /* header */
 
 #headerBox {
-    height: 10vh;
+    height: 11vh;
     position: absolute;
     width: 100%;
-    background-color: red;
+    background:rgba(0, 0, 0, 0.1);
     z-index: 11;
-    object-fit: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     animation: fadeIn 750ms ease-in-out;
+    animation-duration: 750ms;
+    align-items: center;
+}
+
+#headerBox div {
+    display: flex;
+    gap: 2px;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 @keyframes hideEle {

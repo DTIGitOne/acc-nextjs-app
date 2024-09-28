@@ -1,0 +1,1 @@
+export const accWebsite = process.env.NEXT_PUBLIC_ACC_OFFICIAL_WEBSITE;
