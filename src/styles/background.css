@@ -30,6 +30,17 @@
     animation: fadeIn 1500ms ease-in-out;
 }
 
+/* setup background */
+
+#setupBackground {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(290deg, #242424, #111111);
+    display: flex;
+    flex-direction: column;
+    background-size: 300% 300%;
+}
+
 /* header */
 
 #headerBox {

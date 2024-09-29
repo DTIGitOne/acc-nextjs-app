@@ -1,0 +1,64 @@
+/* setup elements */
+
+#topLayer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem;
+    color: rgb(241, 241, 241);
+}
+
+#setupBackground div div h1 {
+    font-size: 14rem;
+    letter-spacing: 1rem;
+    font-family: "Hubballi", sans-serif;
+    font-weight: 900;
+}
+
+#setupBackground div div h3 {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+#secondLayer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content:  flex-end;
+}
+
+#aniBlockElement2 {
+    height: 50vh;
+    width: 60vw;
+    background-color: rgb(232, 232, 232);
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+#imageBox {
+    width: 32vw;
+    height: 32vh;
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+}
+
+#imageBox img {
+    height: 100%;
+    width: 100%;
+}
+
+#thirdLayer {
+    height: 100vh;
+}
+
+#fourthLayer {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

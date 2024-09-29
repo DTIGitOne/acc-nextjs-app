@@ -155,7 +155,7 @@
     white-space: nowrap;
     font-family: "Poppins", sans-serif;
     transition: 0.2s;
-    transition-delay: 0.05s;
+    transition-delay: 0.1s;
     animation-fill-mode: forwards;
     letter-spacing: 1px;
     cursor: pointer;
@@ -165,7 +165,6 @@
     scale: 1.1;
     -webkit-text-fill-color: #fff;
     font-weight: 100;
-    letter-spacing: 2px;
   }
 
   .btn-shine:nth-child(1) {
@@ -186,6 +185,63 @@
     height: 80%;
   }
 
+  /* setup buttons */
+
+  /* From Uiverse.io by gagan-gv */ 
+
+#setupButton {
+  height: 3.4rem;
+  width: 15rem;
+  border: none;
+  border-radius: 40px;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  cursor: default;
+}
+
+#setupButton span {
+  cursor: default;
+  z-index: 1;
+  display: inline-block;
+  background-color: #d30c0c;
+  height: 3rem;
+  width: 15.1rem;
+  border-radius: 35px;
+  color: #fff;
+  line-height: 55px;
+  font-size: 19px;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+}
+
+#setupButton .container {
+  z-index: -1;
+  width: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50px);
+  transition: all 0.4s;
+}
+
+#setupButton .container svg {
+  padding: 0 12px;
+}
+
+#setupButton:hover span {
+  width: 0;
+}
+
+#setupButton:hover .container {
+  z-index: 2;
+  width: 100%;
+}
+
+#setupButton a {
+  cursor: pointer;
+}
   /* button animations */
 
 @keyframes navigatingButtonFadeOut {

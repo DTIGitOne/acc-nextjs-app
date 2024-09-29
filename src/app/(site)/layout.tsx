@@ -1,4 +1,4 @@
-import HeaderMenu from "@/components/HeaderMenu";
+import HeaderMenu from "@/components/menu/HeaderMenu";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
