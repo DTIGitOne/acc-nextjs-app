@@ -9,7 +9,7 @@
 }
 
 #setupBackground div div h1 {
-    font-size: 14rem;
+    font-size: 16rem;
     letter-spacing: 1rem;
     font-family: "Hubballi", sans-serif;
     font-weight: 900;
@@ -30,20 +30,26 @@
 }
 
 #aniBlockElement2 {
+    position: relative;
+    display: flex;
     height: 50vh;
-    width: 60vw;
-    background-color: rgb(232, 232, 232);
-    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+    width: 65vw;
+    background: linear-gradient(129deg, #e5e3e3 50%, #d10707 50%);
+    border: 2px solid white;
+    border-right: 0px;
+    clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 #imageBox {
-    width: 32vw;
-    height: 32vh;
+    width: 30vw;
+    height: 30vh;
     object-fit: cover;
     overflow: hidden;
+    z-index: 50;
+    top: 36vh;
+    transform: translateX(-110%);
+    left: 100%;
     position: absolute;
-    left: 35%;
-    top: 30%;
 }
 
 #imageBox img {
@@ -51,14 +57,11 @@
     width: 100%;
 }
 
-#thirdLayer {
-    height: 100vh;
-}
-
 #fourthLayer {
-    height: 30vh;
+    height: 48vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

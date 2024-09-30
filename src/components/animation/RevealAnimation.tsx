@@ -3,7 +3,7 @@ import { aniPropsSlide } from "@/ts/interface";
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from "react";
 
-const RevealAnimation = ({children, width, height, var1, var2, var3, var4} : aniPropsSlide) => {
+const RevealAnimation = ({children, width, height, var1, var2, var3, var4, position, classes, dur, del} : aniPropsSlide) => {
     const elementDiv = useRef(null);
     const inView = useInView(elementDiv, {once: true})
 
@@ -18,7 +18,7 @@ const RevealAnimation = ({children, width, height, var1, var2, var3, var4} : ani
     }, [inView]);
 
     return (
-        <div ref={elementDiv} style={{position: "relative", width, overflow: "hidden"}}>
+        <div className={classes} ref={elementDiv} style={{position, width, overflow: "hidden"}}>
             <motion.div
               style={{height}}
               variants={{
@@ -37,7 +37,7 @@ const RevealAnimation = ({children, width, height, var1, var2, var3, var4} : ani
                 visible: var4,
               }}
               initial="hidden"
-              transition={{duration: 0.8, ease: "easeIn", delay: 0.25}}
+              transition={{duration: dur, ease: "easeIn", delay: del}}
               animate={slideControls}
               style={{
                 position: "absolute",

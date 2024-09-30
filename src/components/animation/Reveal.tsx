@@ -3,7 +3,7 @@ import { aniProps } from "@/ts/interface";
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from "react";
 
-const Reveal = ({children, width, var1, var2, height} : aniProps) => {
+const Reveal = ({children, width, var1, var2, height, position, classes, dur, del} : aniProps) => {
     const elementDiv = useRef(null);
     const inView = useInView(elementDiv, {once: true})
 
@@ -16,15 +16,16 @@ const Reveal = ({children, width, var1, var2, height} : aniProps) => {
     }, [inView]);
 
     return (
-        <div className=" flex justify-center items-center" ref={elementDiv} style={{position: "relative", width, height, overflow: "hidden"}}>
+        <div className={classes} ref={elementDiv} style={{position, width, height, overflow: "hidden"}}>
             <motion.div
+              className=" z-20"
               style={{height}}
               variants={{
                 hidden: var1,
                 visible: var2,
               }}
               initial="hidden"
-              transition={{duration: 0.65, delay: 0.3}}
+              transition={{duration: dur, delay: del}}
               animate={mainControls}
             >
                 {children}

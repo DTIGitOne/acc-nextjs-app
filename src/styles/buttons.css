@@ -162,7 +162,8 @@
   }
 
   .btn-shine:hover {
-    scale: 1.1;
+    scale: 1.05;
+    letter-spacing: 2px;
     -webkit-text-fill-color: #fff;
     font-weight: 100;
   }
@@ -187,8 +188,6 @@
 
   /* setup buttons */
 
-  /* From Uiverse.io by gagan-gv */ 
-
 #setupButton {
   height: 3.4rem;
   width: 15rem;
@@ -205,7 +204,7 @@
   z-index: 1;
   display: inline-block;
   background-color: #d30c0c;
-  height: 3rem;
+  height: 3.4rem;
   width: 15.1rem;
   border-radius: 35px;
   color: #fff;
@@ -242,6 +241,7 @@
 #setupButton a {
   cursor: pointer;
 }
+
   /* button animations */
 
 @keyframes navigatingButtonFadeOut {

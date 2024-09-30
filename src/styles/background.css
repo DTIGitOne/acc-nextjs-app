@@ -34,21 +34,44 @@
 
 #setupBackground {
     height: auto;
+    position: relative;
     width: 100%;
-    background: linear-gradient(290deg, #242424, #111111);
+    background-image: url('/images/setup background.jpg');
+    background-size: cover; /* Scales the image to cover the element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+}
+
+#animationPage {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    animation: fadeIn 1500ms ease-in-out;
     display: flex;
+    background:rgba(0, 0, 0, 0.7);
     flex-direction: column;
-    background-size: 300% 300%;
+}
+
+/* car background */
+
+#carBackground {
+    width: 100%;
+    z-index: 10;
+    height: 100vh;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fadeIn 500ms ease-in-out;
 }
 
 /* header */
 
 #headerBox {
     height: 11vh;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    background:rgba(0, 0, 0, 0.1);
-    z-index: 11;
+    background:rgba(0, 0, 0, 0.03);
+    z-index: 1111;
     display: flex;
     justify-content: space-between;
     padding: 10px;

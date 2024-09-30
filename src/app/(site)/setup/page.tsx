@@ -4,36 +4,74 @@ import '../../../styles/background.css';
 import '../../../styles/buttons.css';
 import '../../../styles/elements.css';
 import RevealAnimation from '@/components/animation/RevealAnimation';
-import { body, github, gmail, linkedin, subject } from '@/utils/constants';
+import { body, github, gmail, linkedin, subject, tmxWheel } from '@/utils/constants';
 
 const WheelImage = "/images/wheel image.png";
 
 const SetupPage = () => {
     return (
         <div id="setupBackground">
+            <div id='animationPage'>
             <div id='topLayer'>
-                <Reveal height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} width='fit-content'>
+                <Reveal del={0.3} dur={0.65} position={"relative"} height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} width='fit-content'>
                 <div className=' flex flex-col'>
                   <h1>SETUP</h1>
-                  <RevealAnimation height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} var3={{left: 0}} var4={{left: "100%"}} width='fit-content'>
+                  <RevealAnimation dur={0.8} del={0.25} position={"relative"} height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} var3={{left: 0}} var4={{left: "100%"}} width='fit-content'>
                     <h3>All of my settings and hardware used</h3>
                   </RevealAnimation>
                 </div>
                 </Reveal>
             </div>
             <div id='secondLayer'>
-             <Reveal height='auto' var1={{opacity: 0, x: 0}} var2={{opacity: 1, x: "40%"}} width='100%'>
-               <div id='aniBlockElement2'></div>
-             </Reveal>
-            <div id='imageBox'>
+              <Reveal del={0.5} dur={0.8} position={"absolute"} classes=' top-20 left-0 z-50' height='100%' var1={{opacity: 0, y: 0}} var2={{opacity: 1, y: -100}} width='73vw'>
+              <div id='imageBox'>
                 <img src={WheelImage} alt="" />
-            </div>
-            </div>
-            <div id='thirdLayer'>
-                
+              </div>
+              </Reveal>
+              <Reveal del={0.3} dur={0.65} position={"relative"} height='auto' var1={{opacity: 0, x: 0}} var2={{opacity: 1, x: "40%"}} width='100%'>
+               <div id='aniBlockElement2'>
+                <div className=' h-full w-full flex'>
+                <div className=' h-full w-1/2 relative'>
+                </div>
+                <div className='h-full flex p-5 gap-5 flex-col justify-center items-center' style={{width: "48%"}}>
+                  <div>
+                    <h3 className=' text-center font-bold text-white'>
+                      Thrustmaster
+                     <br/>
+                      <p>TMX</p>
+                    </h3>
+                  </div>
+                  <div className=' z-30'>
+                  <a
+                   href={tmxWheel} target='_blank' rel='noopener noreferrer'
+                   type="submit"
+                   className=" cursor-pointer flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-red-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                  >
+                   Thrustmaster
+                  <svg
+                   className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+                   viewBox="0 0 16 19"
+                   xmlns="http://www.w3.org/2000/svg"
+                  >
+                  <path
+                   d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                   className="fill-gray-800 group-hover:fill-gray-800"
+                  ></path>
+                  </svg>
+                  </a>
+                  </div>
+                </div>
+                </div>
+               </div>
+             </Reveal>
             </div>
             <div id='fourthLayer'>
-            <Reveal height='100%' var1={{opacity: 0, y: 0}} var2={{opacity: 1, y: 75}} width='100%'>
+            <div className=' h-1/2 w-full flex justify-center items-end'>
+            <RevealAnimation dur={0.8} del={0.25} position={"relative"} height='auto' var1={{opacity: 0, x: -75}} var2={{opacity: 1,x: 0}} var3={{left: 0}} var4={{left: "100%"}} width='fit-content'>
+              <h2 className=' text-white text-8xl font-light'>Contact:</h2>
+            </RevealAnimation>
+            </div>
+            <Reveal del={0.3} dur={0.65} classes='flex justify-center items-center' position={"relative"} height='100%' var1={{opacity: 0, y: 0}} var2={{opacity: 1, y: 75}} width='100%'>
             <button id='setupButton'>
              <span>Socials</span>
              <div className="container">
@@ -70,6 +108,7 @@ const SetupPage = () => {
             </div>
             </button>
             </Reveal>
+            </div>
             </div>
         </div>
     );

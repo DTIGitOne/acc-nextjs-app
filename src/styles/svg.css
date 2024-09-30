@@ -1,9 +1,14 @@
 .cls-1 {
-    fill: red;
+    fill: #ff0000;
     stroke-width: 0px;
 }
 
 #accLogo {
     height: 100%;
     width: 100%;
+}
+
+.cls-1-wrap {
+    fill: transparent;
+    stroke: white;
 }
