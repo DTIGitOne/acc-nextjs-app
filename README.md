@@ -4,3 +4,5 @@ It will be an app for me to display car data of a racing simulator i play. The u
 The lap will be an mp4 video and the data will be read from the csv tememetry file that is matched to the video.
 
 In this case i am first developing most of the frontend first before starting to create the server side logic for storing the mp4 files and .csv files.
+
+#The public folder withh all of the site images is private
