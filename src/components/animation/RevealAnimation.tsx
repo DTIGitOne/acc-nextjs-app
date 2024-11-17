@@ -3,6 +3,7 @@ import { aniPropsSlide } from "@/ts/interface";
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from "react";
 
+// standard wrapper reveal slide in animation on element view with red addon after animation
 const RevealAnimation = ({children, width, height, var1, var2, var3, var4, position, classes, dur, del} : aniPropsSlide) => {
     const elementDiv = useRef(null);
     const inView = useInView(elementDiv, {once: true})

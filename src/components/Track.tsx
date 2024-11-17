@@ -1,5 +1,4 @@
 'use client'
-import Spa from '@/SVG/Spa';
 import '../styles/tracks.css';
 import { useEffect, useState } from 'react';
 import { trackComp } from '@/ts/interface';
@@ -8,14 +7,18 @@ const TrackCoponent = ({track, name} : trackComp) => {
     const [hoverd, setHoverd] = useState(false);
 
     useEffect(() => {
-        console.log(hoverd);
+        if (hoverd) {
+            document.documentElement.style.setProperty("--track-fill", "#b8b8b8");
+        } else {
+            document.documentElement.style.setProperty("--track-fill", "#ffffff");
+        }
     }, [hoverd]);
 
     return (
         <div onMouseOver={() => setHoverd(true)} onMouseLeave={() => setHoverd(false)} id="trackBox">
                {track}
                <div id='hoverText' style={{animationName: hoverd ? "showText" : ""}}>
-                <div>
+                <div id='zoomText' style={{animationName: hoverd ? "zoomText" : ""}}>
                     {name}
                 </div>
                </div>

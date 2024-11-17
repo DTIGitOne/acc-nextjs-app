@@ -6,11 +6,13 @@ import { useRouter } from 'next/navigation';
 
 const videoSrc = '/videos/acc intro site.mp4';
 
+// Home landing page
 const Home = () => {
   const [ navigating, setNavigating ] = useState(false);
 
   const router = useRouter();
 
+  // navigating and animation function
   const navFunc = () => {
     setNavigating(true);
     setTimeout(() => {
@@ -20,7 +22,7 @@ const Home = () => {
 
   return (
     <div  className='videoBackgroundBox'>
-        <div className='videoBackground' style={{animationName: navigating ? "redirectAniBackground" : ""}}>
+      <div className='videoBackground' style={{animationName: navigating ? "redirectAniBackground" : ""}}>
       <button onClick={navFunc} className="cta">
        <span className="hover-underline-animation" style={{animationName: navigating ? "navigatingButtonFadeOut" : "navigatingButtonFadeIn"}}> Check out details </span>
         <path

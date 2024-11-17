@@ -1,7 +1,7 @@
 "use client"
 import '../../../styles/background.css';
 import '../../../styles/buttons.css';
-import { cars } from '../../../../public/data.ts/cars';
+import { cars } from '../../../../public/data/cars';
 import CarsPageComponent from '@/components/carsMap';
 import { useEffect, useState } from 'react';
 
@@ -21,17 +21,17 @@ const CarsPage = () => {
     ) : (
         <div>
             {cars.map((data) => (
-      <CarsPageComponent 
-        key={data.id} 
-        id={data.id} 
-        name={data.name} 
-        t1={data.t1} 
-        t2={data.t2} 
-        t3={data.t3}
-        video={data.video}
-      />
-    ))}
-        </div>
+                <CarsPageComponent 
+                    key={data.id} 
+                    id={data.id} 
+                    name={data.name} 
+                    t1={data.t1} 
+                    t2={data.t2} 
+                    t3={data.t3}
+                    video={data.video}
+         />
+            ))}
+         </div>
     )}
   </div>
   );

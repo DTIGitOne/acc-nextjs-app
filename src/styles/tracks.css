@@ -1,3 +1,11 @@
+:root {
+  --track-fill: #ffffff;
+  --track-stroke: #ffffff;
+
+  --track-fill-none: #ff0000;
+  --track-stroke-none: #ff0000;
+}
+
 #trackBox {
     width: 25vw;
     height: 27vh;
@@ -7,14 +15,27 @@
 .drawSvg {
     width: 100%;
     height: 100%;
-    fill: #ffffff;
+    fill: var(--track-fill);
     fill-opacity: 0;
-    stroke: #ffffff;
+    stroke: var(--track-stroke);
     stroke-width: 0.5px;
     stroke-dashoffset: 0;
     stroke-dasharray: 3000;
     animation: trackSVG  4.5s ease-in-out , colorSVg 2.5s ease-in-out;
     animation-fill-mode: forwards;
+}
+
+.drawSvg2 {
+  width: 100%;
+  height: 100%;
+  fill: var(--track-fill-none);
+  fill-opacity: 0;
+  stroke: var(--track-stroke-none);
+  stroke-width: 0.5px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 3000;
+  animation: trackSVG  4.5s ease-in-out , colorSVg 2.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 #hoverText {
@@ -24,23 +45,34 @@
     height: 100%;
     width: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-weight: 300;
+    font-weight: 200;
     color: rgb(226, 5, 5);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    font-size: 5rem;
+    font-size: 4rem;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
     animation-delay: 0.1s;
     cursor: pointer;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+#zoomText {
+   animation-duration: 0.4s;
+   animation-fill-mode: forwards;
 }
 
 @keyframes showText {
-    0% {opacity: 0;scale: 0;}
-    100% {opacity: 1;scale: 1;}
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes zoomText {
+  0% {scale: 0.6;}
+  100% {scale: 1;}
 }
 
 @keyframes trackSVG{

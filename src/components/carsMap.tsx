@@ -6,13 +6,15 @@ import { useRouter } from 'next/navigation';
 import { carInfo } from '@/ts/interface';
 import RevealAnimation from './animation/RevealAnimation';
 
+// Component to be mapped to get to specific mapped vehicle on the home page
 const CarsPageComponent = ({ id, name , t1 , t2 , t3 , video}: carInfo) => {
-  const [ navigating, setNavigating ] = useState(false);
+  const [ navigating, setNavigating ] = useState(false); // trigger animation when navigating
 
-  const videoSrc = video;
+  const videoSrc = video; // video background for specific car
 
   const router = useRouter();
 
+  // animation and navigation
   const navFunc = () => {
     setNavigating(true);
     setTimeout(() => {

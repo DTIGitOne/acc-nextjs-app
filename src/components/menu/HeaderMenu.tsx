@@ -5,6 +5,7 @@ import '../../styles/buttons.css';
 import { accWebsite } from '@/utils/constants';
 import { usePathname, useRouter } from 'next/navigation';
 
+// Top nav menu
 const HeaderMenu = () => {
     const router = useRouter();
 
